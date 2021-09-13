@@ -34,15 +34,79 @@ const map = function (collection, iterator) {
 
   return result;
 };
+//===================================================
+//===================================================
+const filter = function (collection, callback) {
 
-const filter = function (collection, callback) {};
+  for (let i = 0; i < collection.length; i++) {
+    callback(function (num) {
+      if (num % 2 && num == 0) {
+        ;
+      }
+    }); return result
+  }
+};
+
+const filter = function (collection, callback) {
+
+  for (let i = 0; i < collection.length; i++) {
+    callback(function (num) {
+      if (num % 2 && num !== 0) {
+        ;
+      }
+    }); return result;
+  };
+}
+
+
+const filter = function (collection, callback) {
+  let result = [];
+  for (let i = 0; i < collection.length; i++) {
+    callback(function (num) {
+      if (num % 2 && num !== 0) {
+        num.push(result);
+      }
+    }); return result;
+  };
+}
+
+
+//=======================================================
+//=======================================================
+
+
 //reject([1, 2, 3, 4, 5, 6], isEven);
-const reject = function (collection, callbackTest) {};
 
+
+
+
+const reject = function (collection, callbackTest) {
+  let result = [];
+  if ([1, 2, 3, 4, 5, 6] && isEven) {
+    for (let i = 0; i < num.length; i++) {
+      if (num % 2 === 0) {
+        num.push(result)
+      }
+    }return result;
+  } else if ([1, 2, 3, 4, 5, 6] && isOdd) {
+    for (let i = 0; i < num.length; i++) {
+      if (num % 2 !== 0) {
+        num.push(result)
+      }
+    }return result;
+  }
+
+
+
+};
 //use indexOf to solve this
-const uniq = function (array) {};
+const uniq = function (array) {
 
-const reduce = function (collection, iterator, accumulator) {};
+
+  
+};
+
+const reduce = function (collection, iterator, accumulator) { };
 
 module.exports = {
   filter,
