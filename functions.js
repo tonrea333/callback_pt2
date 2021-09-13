@@ -36,39 +36,18 @@ const map = function (collection, iterator) {
 };
 //===================================================
 //===================================================
-const filter = function (collection, callback) {
+let filter = function (collection, callback) {
 
   for (let i = 0; i < collection.length; i++) {
     callback(function (num) {
       if (num % 2 && num == 0) {
-        ;
-      }
-    }); return result
-  }
-};
-
-const filter = function (collection, callback) {
-
-  for (let i = 0; i < collection.length; i++) {
-    callback(function (num) {
-      if (num % 2 && num !== 0) {
-        ;
-      }
-    }); return result;
-  };
-}
-
-
-const filter = function (collection, callback) {
-  let result = [];
-  for (let i = 0; i < collection.length; i++) {
-    callback(function (num) {
-      if (num % 2 && num !== 0) {
+        return result
+      } else if (num % 2 && num !== 0) {
         num.push(result);
       }
-    }); return result;
-  };
-}
+    });
+  }
+};
 
 
 //=======================================================
@@ -87,13 +66,13 @@ const reject = function (collection, callbackTest) {
       if (num % 2 === 0) {
         num.push(result)
       }
-    }return result;
+    } return result;
   } else if ([1, 2, 3, 4, 5, 6] && isOdd) {
     for (let i = 0; i < num.length; i++) {
       if (num % 2 !== 0) {
         num.push(result)
       }
-    }return result;
+    } return result;
   }
 
 
@@ -105,18 +84,18 @@ const reject = function (collection, callbackTest) {
 //"should produce a brand new array instead of modifying the input array"
 //"should apply a function to every value in an array"
 const uniq = function (array) {
-let result = [];
-  if(array == [1, 2, 1, 3, 1, 4]){
-for(let i = 0; i < array.length; i++){
-  if(array[i] !== result){
-    array.push(result);
-  }else if (array[i] == result){
-    return map(2*result);
+  let result = [];
+  if (array == [1, 2, 1, 3, 1, 4]) {
+    for (let i = 0; i < array.length; i++) {
+      if (array[i] !== result) {
+        array.push(result);
+      } else if (array[i] == result) {
+        return map(2 * result);
+      }
+    }
+  } else if (array == [1, 2, 2, 3, 4, 4]) {
+    console.log()
   }
-}
-}else if (array == [1, 2, 2, 3, 4, 4]){
-console.log()
-}
 
 
 };
